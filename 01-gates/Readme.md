@@ -14,6 +14,8 @@ begin
     f_orig_o <= (not(b_i) and a_i) or (c_i and not(b_i or not(a_i)));
     f_nand_o <= b_i nand a_i; -- MODIFY THIS FUNCTION
     f_nor_o  <= b_i nor a_i;  -- MODIFY THIS FUNCTION
+    f_nand_o <= not((not(not(b_i) and a_i)) and (not(c_i and not(b_i) and a_i))); -- MODIFY THIS FUNCTION
+    f_nor_o  <= not(b_i or not(a_i)) or not(not(c_i) or b_i or not(a_i));  -- MODIFY THIS FUNCTION
 end architecture dataflow;
 ```
 
