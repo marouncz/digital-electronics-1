@@ -14,14 +14,14 @@
 
   <tr>
     <td>B > A</td>
-    <td> <img src="images/greaterSoP.jpg"  alt="1" width = 360px  ></td>
-    <td> <img src="images/greaterPoS.jpg"  alt="1" width = 360px  ></td>
+    <td> <img src="images/greaterSoP.jpg" width = 360px  ></td>
+    <td> <img src="images/greaterPoS.jpg" width = 360px  ></td>
 
    </tr> 
    <tr>
       <td> B < A </td>
-      <td><img src="images/lowerSop.jpg" alt="3" width = 360px></td>
-      <td><img src="images/lowerPoS.jpg" alt="3" width = 360px></td>
+      <td><img src="images/lowerSoP.jpg" width = 360px></td>
+      <td><img src="images/lowerPoS.jpg" width = 360px></td>
 
   </td>
   </tr>
