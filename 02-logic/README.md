@@ -4,23 +4,38 @@
 
 1. Karnaugh maps for other two functions of 2-bit comparator:
 
-   Greater than:
+<table>
+   <tr>
+    <td></td>
+    <td>SoP</td>
+    <td>PoS</td>
 
-   ![K-maps](images/kmap_empty.png)
+   </tr> 
 
-   Less than:
+  <tr>
+    <td>B > A</td>
+    <td> <img src="images/greaterSoP.jpg"  alt="1" width = 360px  ></td>
+    <td> <img src="images/greaterPoS.jpg"  alt="1" width = 360px  ></td>
 
-   ![K-maps](images/kmap_empty.png)
+   </tr> 
+   <tr>
+      <td> B < A </td>
+      <td><img src="images/lowerSop.jpg" alt="3" width = 360px></td>
+      <td><img src="images/lowerPoS.jpg" alt="3" width = 360px></td>
+
+  </td>
+  </tr>
+</table>
 
 2. Mark the largest possible implicants in the K-map and according to them, write the equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
-   ![Logic functions](images/comparator_min.png)
+   ![Logic functions](images/CodeCogsEqn%20(1).gif)
 
 ### 4-bit comparator
 
 1. Listing of VHDL stimulus process from testbench file (`testbench.vhd`) with at least one assert (use BCD codes of your student ID digits as input combinations). Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
-   Last two digits of my student ID: **xxxx??**
+   Last two digits of my student ID: **xxxx98**
 
 ```vhdl
     p_stimulus : process
@@ -29,15 +44,44 @@
         report "Stimulus process started";
 
         -- First test case
-        s_b <= "BCD_OF_YOUR_SECOND_LAST_ID_DIGIT"; -- Such as "0101" if ID = xxxx56
-        s_a <= "BCD_OF_YOUR_LAST_ID_DIGIT";        -- Such as "0110" if ID = xxxx56
+        s_b <= "1001";
+        s_a <= "1000";
         wait for 100 ns;
         -- Expected output
-        assert ((s_B_greater_A = 'WRITE_CORRECT_VALUE_HERE') and
-                (s_B_equals_A  = 'WRITE_CORRECT_VALUE_HERE') and
-                (s_B_less_A    = 'WRITE_CORRECT_VALUE_HERE'))
+        assert ((s_B_greater_A = '1') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '0'))
         -- If false, then report an error
-        report "Input combination COMPLETE_THIS_TEXT FAILED" severity error;
+        report "Input combination b=9, a=8 FAILED" severity error;
+        
+        
+
+        s_b <= "0001";
+        s_a <= "1000";
+        wait for 100 ns;
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '1'))
+        report "Input combination b=1, a=8 FAILED" severity error;
+        
+        
+        
+        s_b <= "0010";
+        s_a <= "0010";
+        wait for 100 ns;
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '1') and
+                (s_B_less_A    = '0'))
+        report "Input combination b=2, a=2 FAILED" severity error;
+        
+        --Intentional mistake:
+        s_b <= "0011";
+        s_a <= "1000";
+        wait for 100 ns;
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '1') and
+                (s_B_less_A    = '0'))
+        report "Input combination b=1, a=8 FAILED" severity error;
 
         -- Report a note at the end of stimulus process
         report "Stimulus process finished";
@@ -47,4 +91,8 @@
 
 2. Link to your public EDA Playground example:
 
-   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
+   4bit comparator: 
+   [https://www.edaplayground.com/...](https://edaplayground.com/x/8r37)
+
+   2bit comparator: 
+   [https://www.edaplayground.com/...](https://edaplayground.com/x/pfbn)
