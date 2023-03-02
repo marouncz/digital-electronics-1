@@ -18,15 +18,15 @@ library ieee;
 -- Entity declaration for testbench
 ------------------------------------------------------------
 
-entity tb_hex_7seg is
+entity tb_top is
 -- Entity of testbench is always empty
-end entity tb_hex_7seg;
+end entity tb_top;
 
 ------------------------------------------------------------
 -- Architecture body for testbench
 ------------------------------------------------------------
 
-architecture testbench of tb_hex_7seg is
+architecture testbench of tb_top is
 
   -- Testbench local signals
   signal sig_blank : std_logic;
@@ -39,12 +39,15 @@ begin
 
   -- Connecting testbench signals with decoder entity
   -- (Unit Under Test)
-  uut_hex_7seg : entity work.hex_7seg
+
+    
+    uut_hex2seg : entity work.hex_7seg
     port map (
       blank => sig_blank,
       hex   => sig_hex,
-      seg   => sig_seg
+      seg   => sig_seg,
       led   => sig_led
+
     );
 
   --------------------------------------------------------
