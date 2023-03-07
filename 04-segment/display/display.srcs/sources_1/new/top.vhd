@@ -94,6 +94,6 @@ LED(6) <= SW(0);
 
 -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
 
-LED(7) <= SW(0) xor SW(1) xor SW(2) xor SW(3);
+LED(7) <= '1' when (SW = "0001" or SW = "0010" or SW = "0100" or SW = "1000") else '0'; 
 
 end architecture behavioral;
