@@ -45,6 +45,8 @@ begin
             q     => sig_tq,
             q_bar => sig_tq_bar
         );
+        
+
 
     --------------------------------------------------------
     -- Clock generation process
