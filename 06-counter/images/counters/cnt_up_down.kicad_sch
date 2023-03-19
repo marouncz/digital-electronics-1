@@ -1,0 +1,31 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid f43684e3-eab2-4c06-b7d7-e22c75bb059a)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (hierarchical_label "CLK" (shape input) (at 182.88 99.06 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 059f86a2-a297-477b-9e9b-84116ef1ba94)
+  )
+  (hierarchical_label "RST" (shape input) (at 184.15 86.36 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 09ca0318-5b7c-40cc-8322-4d8a1c00a7ef)
+  )
+  (hierarchical_label "EN" (shape input) (at 187.96 73.66 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 0ed4ead3-6864-49d1-bce4-f6c84d1f3549)
+  )
+  (hierarchical_label "cnt_up" (shape input) (at 184.15 109.22 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 13a207b5-3290-4ba5-ad2a-34b02c84335b)
+  )
+  (hierarchical_label "CNT" (shape input) (at 229.87 104.14 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 7ee8c725-bda0-4cf9-b856-270fd547ea2f)
+  )
+)

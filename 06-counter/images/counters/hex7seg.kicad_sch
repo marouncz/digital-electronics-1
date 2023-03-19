@@ -1,0 +1,23 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid eaaecd49-01c4-4a9f-99a6-53857e20f3ff)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (hierarchical_label "SEG" (shape input) (at 189.23 100.33 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 4cf875a9-6a6b-4a79-84c1-107190ff650b)
+  )
+  (hierarchical_label "HEX" (shape input) (at 186.69 81.28 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid fb2b5bf8-93c6-4e0b-b4e2-94b3163feadb)
+  )
+  (hierarchical_label "BLANK" (shape input) (at 186.69 90.17 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid fd3db8e3-6f8c-471e-b825-b58aa5e9d007)
+  )
+)
